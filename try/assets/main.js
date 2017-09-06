@@ -85,7 +85,7 @@ function compile() {
     noRuntime: !/\bnew\b/.test(source)
   });
 
-  var diagnostics = assemblyscript.typescript.formatDiagnostics(assemblyscript.Compiler.lastDiagnostics).trim();
+  var diagnostics = assemblyscript.typescript.formatDiagnosticsEx(assemblyscript.Compiler.lastDiagnostics).trim();
   if (diagnostics.length)
     diagnostics = diagnostics.replace(/^/mg, "// ");
 
